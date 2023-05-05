@@ -29,7 +29,7 @@ export default function Textform() {
 
   const handleclear=()=>{
     console.log("clear text");
-    setText(" ");
+    setText("");
   }
   return (
     <>
@@ -41,8 +41,9 @@ export default function Textform() {
 <button className="btn btn-primary mx-3" onClick={handleCopy}>Copy To Clipboard</button>
 <button className="btn btn-danger mx-3" onClick={handleclear}>Clear Text</button>
 <div className='container my-3 px-3'>
-<h2>Your Text Summary</h2>
-<p>{Text.length} Characters</p>
+<h2>Text Report</h2>
+<p>Character count :{Text.length}</p>
+<p>Minutes required to read :{0.008 * Text.length}</p>
 </div>
 <div className='container'>
   <h3>Preview</h3>
